@@ -92,7 +92,7 @@ body {
 }
 
 #board tr td.mineRevealed {
-    background: url("./images/bomb.webp");
+    background: url("./images/bomb.png");
     background-size: contain;
     background-color: #b34f4f;
 }
