@@ -40,9 +40,14 @@ function init(r, c, m) {
     rightClick(e);
   }));
   //disables context menu on the board
-  document.querySelectorAll("#board, .menu, #stats").forEach(e => e.addEventListener("contextmenu", n => {
+  document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
   }));
+  let text = document.querySelectorAll("#time, #flag, .menuButton");
+  text.addEventListener("touchstart", absorbEvent);
+  text.addEventListener("touchend", absorbEvent);
+  text.addEventListener("touchmove", absorbEvent);
+  text.addEventListener("touchcancel", absorbEvent);
   stopTimer();
 }
 
