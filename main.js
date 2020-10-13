@@ -43,11 +43,6 @@ function init(r, c, m) {
   document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
   }));
-  let text = document.querySelectorAll("#time, #flag, .menuButton");
-  text.addEventListener("touchstart", absorbEvent);
-  text.addEventListener("touchend", absorbEvent);
-  text.addEventListener("touchmove", absorbEvent);
-  text.addEventListener("touchcancel", absorbEvent);
   stopTimer();
 }
 
