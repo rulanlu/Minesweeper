@@ -1,0 +1,195 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+  
+body {
+    background: rgb(182, 219, 132);
+}
+ 
+#board {
+    background: #555555;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    table-layout: fixed;
+}
+
+#board tr td {
+    background: #93af72;
+    width: 20px;
+    text-align: center;
+}
+
+#board tr td:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+#board tr td.leftClicked {
+    background: #dfdfdf;
+    font-size: 10px;
+}
+
+#board tr td.default {
+    background: #93af72;
+}
+
+#board tr td.rightClicked {
+    background: url("./images/flag.png"); 
+    background-size: contain;
+    background-color: #93af72;
+}
+
+#board tr td.one {
+    background: url("./images/1.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.two {
+    background: url("./images/2.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.three {
+    background: url("./images/3.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.four {
+    background: url("./images/4.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.five {
+    background: url("./images/5.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.six {
+    background: url("./images/6.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.seven {
+    background: url("./images/7.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.eight {
+    background: url("./images/8.png"); 
+    background-size: contain;
+    background-color: #dfdfdf;
+}
+
+#board tr td.mineRevealed {
+    background: url("./images/bomb.webp");
+    background-size: contain;
+    background-color: #b34f4f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+}  
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  
+.menuButton {
+    padding: 5px 0.5em ;
+    border: 0px solid gray;
+    background-color: rgba(128, 128, 128, 0.233);
+    transition-duration: 0.4s;
+    margin: 5px;
+    cursor: pointer;
+    font-size:1em;
+    outline-color: #3c5c3a;
+}
+  
+.menuButton:hover {
+    color: white;
+    background: #63995f;
+}
+
+#stats {
+    display: flex;
+    justify-content: center;
+}
+
+#time {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+#flag {
+    font-size: 20px;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: cursive;
+    text-align: center;
+}
+
+#overlay * {
+    pointer-events: none;
+}
+  
+#overlay.active {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+    #board {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    #board {
+        max-width: 325px;
+    }
+
+    .menu, #time, #flag {
+        font-size: 17px;
+    }
+}
+
+  
+  
