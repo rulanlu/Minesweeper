@@ -43,13 +43,6 @@ function init(r, c, m) {
   document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
   }));
-  $(function(){
-  document.querySelectorAll("#board td").bind("taphold", tapholdHandler);
- 
-  function tapholdHandler(event){
-    rightClick(event.target);
-  }
-});
   stopTimer();
 }
 
