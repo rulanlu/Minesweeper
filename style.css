@@ -18,7 +18,7 @@ body {
 
 #board tr td {
     background: #93af72;
-    width: 20px;
+    width: 30px;
     text-align: center;
 }
 
@@ -179,11 +179,19 @@ body {
         min-width: 100%;
         max-width: 100%;
     }
+    
+    #board tr td {
+        width: 20px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (orientation: landscape) {
     #board {
         max-width: 325px;
+    }
+    
+    #board tr td {
+        width: 20px;
     }
 
     .menu, #time, #flag {
