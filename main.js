@@ -42,7 +42,14 @@ function init(r, c, m) {
   //disables context menu on the board
   document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
-  })); 
+  }));
+  $(function(){
+  document.querySelectorAll("#board td").bind("taphold", tapholdHandler);
+ 
+  function tapholdHandler(event){
+    rightClick(event.target);
+  }
+});
   stopTimer();
 }
 
