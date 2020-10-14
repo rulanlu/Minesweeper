@@ -43,6 +43,9 @@ function init(r, c, m) {
   document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
   }));
+  $("td").on("taphold",function(){
+    $(this).show();
+  });  
   stopTimer();
 }
 
