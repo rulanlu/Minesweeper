@@ -42,10 +42,7 @@ function init(r, c, m) {
   //disables context menu on the board
   document.querySelectorAll("#board").forEach(e => e.addEventListener("contextmenu", n => {
     n.preventDefault();
-  }));
-  $("td").on("taphold",function(){
-    $(this).show();
-  });  
+  })); 
   stopTimer();
 }
 
