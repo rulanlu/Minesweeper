@@ -1,3 +1,2 @@
 # Minesweeper game
-
-https://rulanlu.github.io
+Minesweeper game made using HTML, CSS, and Javascript (jQuery)
